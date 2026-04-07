@@ -1,0 +1,31 @@
+PROG5121 - Programming 1A POE
+Chat Application - Registration and Login Feature (Part 1)
+
+Student Information
+-Name: Patrick Tshiluwa Kamunga
+-Student Number:ST10497579
+-Module: Programming 1A (PROG5121)
+-Date: April 2026
+
+Project Description
+This is Part 1 of the Chat Application POE. It implements a registration and login system with validation rules.
+
+Features Implemented
+
+1. Username Validation (`checkUserName()`)
+- Must contain an underscore (`_`)
+- Maximum length of 5 characters
+- Returns `true` if valid, `false` otherwise
+
+2. Password Validation (`checkPasswordComplexity()`)
+- Minimum 8 characters long
+- Contains at least 1 capital letter
+- Contains at least 1 number
+- Contains at least 1 special character
+- Returns `true` if valid, `false` otherwise
+
+3. Phone Number Validation (`checkCellPhoneNumber()`)
+- Must start with South African international code `+27`
+- Appropriate length for SA numbers
+- Returns `true` if valid, `false` otherwise
+
