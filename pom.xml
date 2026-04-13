@@ -11,4 +11,13 @@
         <maven.compiler.target>20</maven.compiler.target>
         <exec.mainClass>com.mycompany.prog5121_poe.PROG5121_POE</exec.mainClass>
     </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 </project>
