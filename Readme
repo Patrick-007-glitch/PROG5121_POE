@@ -23,10 +23,10 @@ Features Implemented
 
 3. Message Details
 Each message contains:
-- **Message ID:** 10 random digits
-- **Message Hash:** First two of ID : message number : first word + last word (ALL CAPS)
-- **Recipient:** Phone number (10 digits or +27 format)
-- **Message:** Text (max 250 characters)
+- Message ID: 10 random digits
+- Message Hash:First two of ID : message number : first word + last word (ALL CAPS)
+- Recipient:Phone number (10 digits or +27 format)
+- Message:Text (max 250 characters)
 
 4. Message Actions
 - Send Message → "Message successfully sent"
