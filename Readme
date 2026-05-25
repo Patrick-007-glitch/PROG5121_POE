@@ -1,5 +1,5 @@
 PROG5121 - Programming 1A POE
-Chat Application - Registration and Login Feature (Part 1)
+Chat Application - Registration and Login Feature (Part 2)
 
 Student Information
 -Name: Patrick Tshiluwa Kamunga
@@ -8,24 +8,48 @@ Student Information
 -Date: April 2026
 
 Project Description
-This is Part 1 of the Chat Application POE. It implements a registration and login system with validation rules.
+This is Part 2 of the Chat Application POE. It adds message sending functionality to the existing registration and login system.
 
 Features Implemented
 
-1. Username Validation (`checkUserName()`)
-- Must contain an underscore (`_`)
-- Maximum length of 5 characters
-- Returns `true` if valid, `false` otherwise
+1. Login Protection
+- Users must log in before sending messages
+- QuickChat menu appears after successful login
 
-2. Password Validation (`checkPasswordComplexity()`)
-- Minimum 8 characters long
-- Contains at least 1 capital letter
-- Contains at least 1 number
-- Contains at least 1 special character
-- Returns `true` if valid, `false` otherwise
+2. QuickChat Menu
+- Option 1: Send Messages
+- Option 2: Show Recently Sent Messages (Coming Soon)
+- Option 3: Logout
 
-3. Phone Number Validation (`checkCellPhoneNumber()`)
-- Must start with South African international code `+27`
-- Appropriate length for SA numbers
-- Returns `true` if valid, `false` otherwise
+3. Message Details
+Each message contains:
+- **Message ID:** 10 random digits
+- **Message Hash:** First two of ID : message number : first word + last word (ALL CAPS)
+- **Recipient:** Phone number (10 digits or +27 format)
+- **Message:** Text (max 250 characters)
+
+4. Message Actions
+- Send Message → "Message successfully sent"
+- Disregard Message → "Press 0 to delete the message"
+- Store Message → Saved to JSON file
+
+5. JSON Storage
+- Stored messages saved to `stored_messages.json`
+- Each message saved as a JSON object
+
+6. Total Messages Counter
+- Displays total number of successfully sent messages
+
+JUnit Tests (MessageTest.java)
+- Message length validation (max 250 characters)
+- Recipient phone number validation
+- Message ID length (10 digits)
+- Message hash format
+
+How to Run
+1. Run `Main.java` in NetBeans
+2. Register a new user
+3. Login with your credentials
+4. Select Option 1 from QuickChat Menu
+5. Follow the prompts to send messages
 
